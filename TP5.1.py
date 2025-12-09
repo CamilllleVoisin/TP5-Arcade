@@ -18,9 +18,9 @@ class MyGame(arcade.Window):
     def __init__(self, width, height, title):
         # Call the parent class's init function
         super().__init__(width, height, title)
-        x_pos = rd.randint(50, 500)
-        y_pos = rd.randint(50, 500)
-        rayon = rd.randint(10, 100)
+        self.x_pos = rd.randint(50, 500)
+        self.y_pos = rd.randint(50, 500)
+        self.rayon = rd.randint(10, 100)
     def on_draw(self):
         """
                     C'est la méthode que Arcade invoque à chaque "frame" pour afficher les éléments
@@ -31,7 +31,7 @@ class MyGame(arcade.Window):
 
         for i in range(20):
             color = rd.choice(color_list)
-            arcade.draw_circle_filled(x_pos, y_pos, rayon, color)
+            arcade.draw_circle_filled(self.x_pos, self.y_pos, self.rayon, color)
 
     def on_update(self, delta_time: float) -> bool | None:
         pass
