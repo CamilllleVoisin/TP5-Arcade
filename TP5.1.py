@@ -11,28 +11,6 @@ import time
 
 from pyglet.event import EVENT_HANDLE_STATE
 
-color_list = [(rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),
-              (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255)),]
-
-
 
 class MyGame(arcade.Window):
     def __init__(self, width, height, title):
@@ -41,7 +19,8 @@ class MyGame(arcade.Window):
 
         self.ballpos = []
         for a in range(20):
-            self.ballpos.append([rd.randint(50, 500), rd.randint(50, 500), rd.randint(5, 50), rd.choice(color_list)])
+            self.ballpos.append([rd.randint(50, 500), rd.randint(50, 500), rd.randint(5, 50),
+                                 (rd.randint(0, 255), rd.randint(0, 255), rd.randint(0, 255))])
     def on_draw(self):
         """
                     C'est la méthode que Arcade invoque à chaque "frame" pour afficher les éléments
