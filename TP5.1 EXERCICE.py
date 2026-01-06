@@ -2,6 +2,7 @@
 Par Camille Voisin
 commencé le 6 janvier 2026
 TP5.1 Exercice de classe
+Idée : un monster truck
 """
 
 
@@ -29,6 +30,10 @@ def main():
                                      600, y - 40,
                                      700, y - 40,
                                      arcade.color.ROMAN_SILVER)
+    arcade.draw_circle_filled(650, y + 1, 20, arcade.color.BLACK)
+    arcade.draw_circle_filled(545, y + 46, 20, arcade.color.BLACK)
+    arcade.draw_circle_filled(650, y + 1, 10, arcade.color.BATTLESHIP_GREY)
+    arcade.draw_circle_filled(545, y + 46, 10, arcade.color.BATTLESHIP_GREY)
 
     arcade.finish_render()
     arcade.run()
