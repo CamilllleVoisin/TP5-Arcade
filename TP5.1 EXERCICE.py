@@ -2,7 +2,7 @@
 Par Camille Voisin
 commencé le 6 janvier 2026
 TP5.1 Exercice de classe
-Idée : un monster truck
+Idée : un monster truck qui saute au dessu de bus scolaires
 """
 
 
