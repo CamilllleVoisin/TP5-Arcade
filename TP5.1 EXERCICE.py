@@ -38,7 +38,9 @@ def main():
     arcade.draw_polygon_filled([[573, y + 41], [630, y + 16],[630, y + 46], [573, y + 71]], arcade.color.BLUE_VIOLET)
     arcade.draw_ellipse_outline(650, y + 1, 40, 40, arcade.color.BLACK_OLIVE, 3)
     arcade.draw_ellipse_outline(545, y + 46, 40, 40, arcade.color.BLACK_OLIVE, 3)
-    #arcade.draw_parabola_filled(573, y + 41, 600, y + 61, arcade.color.DARK_LIVER, 7)
+
+    arcade.draw.draw_arc_outline(530,y + 26, 100,100,arcade.color.BLUE_VIOLET, 20, 85, 7, 355)
+    arcade.draw.draw_arc_outline(658,y - 18, 100,100,arcade.color.BLUE_VIOLET, 80, 145, 7, 15)
 
 
     arcade.finish_render()
