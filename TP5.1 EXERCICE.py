@@ -13,6 +13,7 @@ SCREEN_HEIGHT = 680
 
 
 def main():
+    points_rect = [50, 75, 100, 75]
     #le sol et le ciel provient des exemples de la théorie
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "TP5 Arcade")
     arcade.set_background_color(arcade.color.SKY_BLUE)
@@ -34,6 +35,12 @@ def main():
     arcade.draw_circle_filled(545, y + 46, 20, arcade.color.BLACK)
     arcade.draw_circle_filled(650, y + 1, 10, arcade.color.BATTLESHIP_GREY)
     arcade.draw_circle_filled(545, y + 46, 10, arcade.color.BATTLESHIP_GREY)
+    arcade.draw_polygon_filled([[573, y + 41], [630, y + 16],[630, y + 46], [573, y + 71]], arcade.color.BLUE_VIOLET)
+    arcade.draw_ellipse_outline(650, y + 1, 40, 40, arcade.color.BLACK_OLIVE, 3)
+    arcade.draw_ellipse_outline(545, y + 46, 40, 40, arcade.color.BLACK_OLIVE, 3)
+    #arcade.draw_parabola_filled(573, y + 41, 600, y + 61, arcade.color.DARK_LIVER, 7)
+
+
     arcade.finish_render()
     arcade.run()
 
