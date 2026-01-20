@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c30d70bc-3611-480c-93e4-16c9f9fa1a10" name="Changes" comment="Save">
+    <list default="true" id="c30d70bc-3611-480c-93e4-16c9f9fa1a10" name="Changes" comment="Finished the body of the Halo Warthog looking like car">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP5.1 EXERCICE.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP5.1 EXERCICE.py" afterDir="false" />
     </list>
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768510931118</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Finished the body of the Halo Warthog looking like car">
+      <option name="closed" value="true" />
+      <created>1768592808682</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1768592808682</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +209,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="nothing changed, just trying to rotate a rectangle/polygon" />
     <MESSAGE value="Save" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save" />
+    <MESSAGE value="Finished the body of the Halo Warthog looking like car" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the body of the Halo Warthog looking like car" />
   </component>
 </project>
