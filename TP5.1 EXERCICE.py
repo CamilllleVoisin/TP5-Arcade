@@ -7,20 +7,23 @@ Idée : un monster truck qui saute au dessu de bus scolaires
 
 
 import arcade
+import random as rd
 
 SCREEN_WIDTH = 840
 SCREEN_HEIGHT = 680
 
 
 def main():
-    points_rect = [50, 75, 100, 75]
-    #le sol et le ciel provient des exemples de la théorie
+    #le sol et le ciel proviennent des exemples de la théorie
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "TP5 Arcade")
     arcade.set_background_color(arcade.color.SKY_BLUE)
     arcade.start_render()
     arcade.draw.draw_lrbt_rectangle_filled(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT / 2.26, arcade.color.FLATTERY)
 
     y = SCREEN_HEIGHT / 2
+    x = 425
+    y_bus = y - 39
+
     arcade.draw.draw_line(SCREEN_WIDTH - 175, y - 35, 500, SCREEN_HEIGHT - 300,
                           arcade.color.ROMAN_SILVER, 10)
     arcade.draw.draw_line(500,SCREEN_HEIGHT - 301, 610, y - 37,
@@ -41,7 +44,6 @@ def main():
 
     arcade.draw.draw_arc_outline(530,y + 26, 100,100,arcade.color.BLUE_VIOLET, 20, 85, 7, 355)
     arcade.draw.draw_arc_outline(658,y - 18, 100,100,arcade.color.BLUE_VIOLET, 80, 145, 7, 15)
-    #y +21
     arcade.draw_polygon_filled([[645, y + 19], [653, y + 21],[653, y + 32], [645, y + 30]], arcade.color.EERIE_BLACK)
     arcade.draw_polygon_filled([[548, y + 63], [556, y + 60],[558, y + 70], [550, y + 71]], arcade.color.EERIE_BLACK)
     arcade.draw_point(25, 25, arcade.color.BLACK, 7)
@@ -57,31 +59,48 @@ def main():
     arcade.draw_line(630, y + 90, 677, y + 76, arcade.color.BLACK, 3)
     arcade.draw_line(677, y + 76, 678, y + 46, arcade.color.BLACK, 3)
     arcade.draw_line(556, y + 84, 575, y + 78, arcade.color.BLUE_VIOLET, 3)
-    arcade.draw_lrbt_rectangle_filled(450,475, y - 39, y + 25, arcade.color.GOLD)
-    arcade.draw_lrbt_rectangle_filled(425,450, y - 39, y, arcade.color.GOLD)
-    arcade.draw_lrbt_rectangle_filled(475,500, y - 39, y, arcade.color.GOLD)
-    arcade.draw_circle_filled(450, y, 25, arcade.color.GOLD)
-    arcade.draw_circle_filled(475, y, 25, arcade.color.GOLD)
-    arcade.draw_line(425, y - 39, 425, y, arcade.color.BLACK, 2)
-    arcade.draw_line(500, y - 39, 500, y, arcade.color.BLACK, 2)
-    arcade.draw_line(450, y + 25, 475, y + 25, arcade.color.BLACK, 2)
-    arcade.draw_arc_outline(450, y, 48, 48, arcade.color.BLACK, 90, 180, 4)
-    arcade.draw_arc_outline(475, y, 48, 48, arcade.color.BLACK, 90, 180, 4, 90)
-    arcade.draw_arc_outline(468, y - 20, 24, 24, arcade.color.BLACK, 90, 180, 4, 90)
-    arcade.draw_arc_outline(457, y - 20, 24, 24, arcade.color.BLACK, 90, 180, 4)
-    arcade.draw_line(457, y - 8, 468, y - 8, arcade.color.BLACK, 2)
-    arcade.draw_line(445, y - 20, 445, y - 39, arcade.color.BLACK, 2)
-    arcade.draw_line(480, y - 20, 480, y - 39, arcade.color.BLACK, 2)
-    arcade.draw_circle_filled(442, y + 13, 6, arcade.color.RED)
-    arcade.draw_circle_filled(483, y + 13, 6, arcade.color.RED)
-    arcade.draw_text("BUS", 449, y + 10, arcade.color.BLACK)
-    arcade.draw_polygon_filled([[440, y + 5], [440, y - 8], [485, y - 8], [485, y + 5]], arcade.color.SKY_BLUE)
-    arcade.draw_line(440, y + 5, 485, y + 5, arcade.color.BLACK, 2)
-    arcade.draw_line(440, y + 5, 440, y - 8, arcade.color.BLACK, 2)
-    arcade.draw_line(485, y + 5, 485, y - 8, arcade.color.BLACK, 2)
-    arcade.draw_line(440, y - 8, 485, y - 8, arcade.color.BLACK, 2)
-
-
+    #bus
+    for i in range(4):
+        arcade.draw_lrbt_rectangle_filled(x + 25,x + 50, y_bus, y + 25, arcade.color.GOLD)
+        arcade.draw_lrbt_rectangle_filled(x,x + 25, y_bus, y, arcade.color.GOLD)
+        arcade.draw_lrbt_rectangle_filled(x + 50,x + 75, y_bus, y, arcade.color.GOLD)
+        arcade.draw_circle_filled(x + 25, y_bus + 39, 25, arcade.color.GOLD)
+        arcade.draw_circle_filled(x + 50, y_bus + 39, 25, arcade.color.GOLD)
+        arcade.draw_line(x, y_bus, x, y_bus + 39, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 75, y_bus, x + 75, y_bus + 39, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 25, y_bus + 64, x + 50, y_bus + 64, arcade.color.BLACK, 2)
+        arcade.draw_arc_outline(x + 25, y_bus + 39, 48, 48, arcade.color.BLACK, 90, 180, 4)
+        arcade.draw_arc_outline(x + 50, y_bus + 39, 48, 48, arcade.color.BLACK, 90, 180, 4, 90)
+        arcade.draw_arc_outline(x + 43, y_bus + 39 - 20, 24, 24, arcade.color.BLACK, 90, 180, 4, 90)
+        arcade.draw_arc_outline(x + 32, y_bus + 19, 24, 24, arcade.color.BLACK, 90, 180, 4)
+        arcade.draw_line(x + 32, y_bus + 31, x + 43, y_bus + 31, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 20, y_bus + 19, x + 20, y_bus, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 55, y_bus + 19, x + 55, y_bus, arcade.color.BLACK, 2)
+        arcade.draw_circle_filled(x + 17, y_bus + 52, 6, arcade.color.RED)
+        arcade.draw_circle_filled(x + 58, y_bus + 52, 6, arcade.color.RED)
+        arcade.draw_text("BUS", x + 24, y_bus + 49, arcade.color.BLACK)
+        arcade.draw_polygon_filled([[x + 15, y_bus + 44], [x + 15, y_bus + 31], [x + 60, y_bus + 31], [x + 60, y_bus + 44]], arcade.color.SKY_BLUE)
+        arcade.draw_line(x + 15, y_bus + 44, x + 60, y_bus + 44, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 15, y_bus + 44, x + 15, y_bus + 31, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 60, y_bus + 44, x + 60, y_bus + 31, arcade.color.BLACK, 2)
+        arcade.draw_line(x + 15, y_bus + 31, x + 60, y_bus + 31, arcade.color.BLACK, 2)
+        x -= 100
+    #nuages
+    for i in range(7):
+        coos_x_nuage = rd.randint(200, 800)
+        coos_y_nuage = rd.randint(500, 550)
+        arcade.draw_circle_filled(coos_x_nuage, coos_y_nuage, 25, arcade.color.WHITE)
+        arcade.draw_circle_filled(coos_x_nuage + 25, coos_y_nuage, 25, arcade.color.WHITE)
+        arcade.draw_circle_filled(coos_x_nuage + 12, coos_y_nuage + 25, 25, arcade.color.WHITE)
+        arcade.draw_circle_filled(coos_x_nuage - 25, coos_y_nuage, 25, arcade.color.WHITE)
+        arcade.draw_circle_filled(coos_x_nuage - 12, coos_y_nuage + 25, 25, arcade.color.WHITE)
+    #soleil
+    arcade.draw_circle_filled(0, 680, 75, arcade.color.YELLOW)
+    #details dans le sol
+    for i in range(100):
+        arcade.draw_circle_filled(rd.randint(0, 840), rd.randint(0, 284), 2, arcade.color.GRAY)
+    for i in range(100):
+        arcade.draw_circle_filled(rd.randint(0, 840), rd.randint(0, 284), 2, arcade.color.BISTRE)
 
     arcade.finish_render()
     arcade.run()

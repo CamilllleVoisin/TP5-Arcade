@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c30d70bc-3611-480c-93e4-16c9f9fa1a10" name="Changes" comment="Finished the body of the Halo Warthog looking like car">
+    <list default="true" id="c30d70bc-3611-480c-93e4-16c9f9fa1a10" name="Changes" comment="started making the school buses on the ground">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP5.1 EXERCICE.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP5.1 EXERCICE.py" afterDir="false" />
     </list>
@@ -191,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768592808682</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="started making the school buses on the ground">
+      <option name="closed" value="true" />
+      <created>1768927482268</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1768927482268</updated>
+    </task>
+    <task id="LOCAL-00017" summary="started making the school buses on the ground">
+      <option name="closed" value="true" />
+      <created>1768927651296</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1768927651296</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +226,7 @@
     <MESSAGE value="nothing changed, just trying to rotate a rectangle/polygon" />
     <MESSAGE value="Save" />
     <MESSAGE value="Finished the body of the Halo Warthog looking like car" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the body of the Halo Warthog looking like car" />
+    <MESSAGE value="started making the school buses on the ground" />
+    <option name="LAST_COMMIT_MESSAGE" value="started making the school buses on the ground" />
   </component>
 </project>
