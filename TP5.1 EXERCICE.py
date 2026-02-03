@@ -24,6 +24,7 @@ def main():
     x = 425
     y_bus = y - 39
 
+    #le saut
     arcade.draw.draw_line(SCREEN_WIDTH - 175, y - 35, 500, SCREEN_HEIGHT - 300,
                           arcade.color.ROMAN_SILVER, 10)
     arcade.draw.draw_line(500,SCREEN_HEIGHT - 301, 610, y - 37,
@@ -34,6 +35,7 @@ def main():
                                      600, y - 40,
                                      700, y - 40,
                                      arcade.color.ROMAN_SILVER)
+    #la voiture
     arcade.draw_circle_filled(650, y + 1, 20, arcade.color.BLACK)
     arcade.draw_circle_filled(545, y + 46, 20, arcade.color.BLACK)
     arcade.draw_circle_filled(650, y + 1, 10, arcade.color.BATTLESHIP_GREY)
@@ -46,8 +48,6 @@ def main():
     arcade.draw.draw_arc_outline(658,y - 18, 100,100,arcade.color.BLUE_VIOLET, 80, 145, 7, 15)
     arcade.draw_polygon_filled([[645, y + 19], [653, y + 21],[653, y + 32], [645, y + 30]], arcade.color.EERIE_BLACK)
     arcade.draw_polygon_filled([[548, y + 63], [556, y + 60],[558, y + 70], [550, y + 71]], arcade.color.EERIE_BLACK)
-    arcade.draw_point(25, 25, arcade.color.BLACK, 7)
-    arcade.draw_text("TP5 Par Camille Voisin 404", 30, 19, arcade.color.GOLD)
     arcade.draw_triangle_filled(526, y + 76, 555, y + 85, 585, y + 66, arcade.color.BLUE_VIOLET)
     arcade.draw_triangle_filled(552, y + 73, 574, y + 70, 574, y + 54, arcade.color.BLUE_VIOLET)
     arcade.draw_triangle_filled(630, y + 18, 630, y + 46, 645, y + 46, arcade.color.BLUE_VIOLET)
@@ -86,9 +86,9 @@ def main():
         arcade.draw_line(x + 15, y_bus + 31, x + 60, y_bus + 31, arcade.color.BLACK, 2)
         x -= 100
     #nuages
-    for i in range(7):
-        coos_x_nuage = rd.randint(200, 800)
-        coos_y_nuage = rd.randint(500, 550)
+    for i in range(10):
+        coos_x_nuage = rd.randint(100, 850)
+        coos_y_nuage = rd.randint(450, 600)
         arcade.draw_circle_filled(coos_x_nuage, coos_y_nuage, 25, arcade.color.WHITE)
         arcade.draw_circle_filled(coos_x_nuage + 25, coos_y_nuage, 25, arcade.color.WHITE)
         arcade.draw_circle_filled(coos_x_nuage + 12, coos_y_nuage + 25, 25, arcade.color.WHITE)
@@ -101,6 +101,15 @@ def main():
         arcade.draw_circle_filled(rd.randint(0, 840), rd.randint(0, 284), 2, arcade.color.GRAY)
     for i in range(100):
         arcade.draw_circle_filled(rd.randint(0, 840), rd.randint(0, 284), 2, arcade.color.BISTRE)
+
+    #l'arrivée
+    arcade.draw_line(0, y + 35, 100, y + 35, arcade.color.ROMAN_SILVER, 10)
+    arcade.draw_line(0, y - 40, 99, y + 38, arcade.color.ROMAN_SILVER, 10)
+
+    #Le texte
+    arcade.draw_point(25, 25, arcade.color.BLACK, 7)
+    arcade.draw_text("TP5 Par Camille Voisin 404", 30, 19, arcade.color.GOLD)
+
 
     arcade.finish_render()
     arcade.run()
